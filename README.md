@@ -9,7 +9,7 @@ Projeto desenvolvido com **Ionic + Angular** para criar um cartão digital de id
 ---
 ## ✨ Demonstração
 
-![Demonstração](assets/ion-gif.gif)
+![Demonstração](/assets/ion-gif.gif)
 
 ---
 
