@@ -1,20 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="vermelho-claro">
+    <ion-title>Cartão ID</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card-content class="ion-text-center">
+
+      <!-- Minha Foto -->
+      <ion-avatar style="margin: 0 auto 16px auto; width: 100px; height: 100px;">
+        <img src="/assets/minhaFoto.jpeg" alt="Foto de Joyce">
+      </ion-avatar>
+
+      <!-- Meu Nome -->
+      <h2><strong>Joyce Do Vale Silva</strong></h2>
+
+      <!-- Minha Matrícula -->
+      <ion-text color="medium">
+        <p>Matrícula: <strong>25106404</strong></p>
+      </ion-text>
+
+      <!-- unidade/turno -->
+      <ion-text color="medium">
+        <p>Bonsucesso - Manhã</p>
+      </ion-text>
+
+      <!-- Botão -->
+      <ion-button expand="block" routerLink="/sobre" color="vermelho-claro">
+        Ver mais sobre mim
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

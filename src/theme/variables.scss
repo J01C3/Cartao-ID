@@ -1,2 +1,19 @@
 // For information on how to create your own theme, please refer to:
 // https://ionicframework.com/docs/theming/
+:root {
+  --ion-color-vermelho-claro: #ac2c2c;
+  --ion-color-vermelho-claro-rgb: 255, 107, 107;
+  --ion-color-vermelho-claro-contrast: #ffffff;
+  --ion-color-vermelho-claro-contrast-rgb: 255, 255, 255;
+  --ion-color-vermelho-claro-shade: #e05e5e;
+  --ion-color-vermelho-claro-tint: #ff7a7a;
+}
+
+.ion-color-vermelho-claro {
+  --ion-color-base: var(--ion-color-vermelho-claro);
+  --ion-color-base-rgb: var(--ion-color-vermelho-claro-rgb);
+  --ion-color-contrast: var(--ion-color-vermelho-claro-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-vermelho-claro-contrast-rgb);
+  --ion-color-shade: var(--ion-color-vermelho-claro-shade);
+  --ion-color-tint: var(--ion-color-vermelho-claro-tint);
+}
