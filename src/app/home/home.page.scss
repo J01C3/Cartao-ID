@@ -1,32 +1,153 @@
-#container {
-  text-align: center;
+/* ========================= */
+/* BASE GLOBAL */
+/* ========================= */
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+html, body, ion-app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f4f6f8;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+.header-custom {
+  background: #ac2c2c !important;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  position: relative;
+  z-index: 10;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+.titulo-header {
+  color: white !important;
+  font-weight: bold;
+  font-size: 19px;
   margin: 0;
 }
 
-#container a {
-  text-decoration: none;
+/* ========================= */
+/* CONTENT */
+/* ========================= */
+
+.home-content {
+  --background: #f4f6f8 !important;
+  --offset-top: 0px !important;
+  --padding-top: 0px !important;
+  --padding-bottom: 0px !important;
+  height: 100%;
 }
 
-ion-card {
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* ❌ NÃO CENTRALIZA AQUI */
+.home-content::part(scroll) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* ========================= */
+/* FUNDO (IGUAL TELA 2) */
+/* ========================= */
+
+.main-bg {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================= */
+/* CENTRALIZAÇÃO REAL */
+/* ========================= */
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  /* 🔥 ISSO AQUI RESOLVE O APK */
+  padding-top: calc(40px + env(safe-area-inset-top));
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+
+  box-sizing: border-box;
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.cartao-id-fixo {
+  width: 100%;
+  max-width: 350px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 35px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* ========================= */
+/* RESTO IGUAL */
+/* ========================= */
+
+.foto-perfil {
+  width: 115px;
+  height: 115px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ac2c2c;
+}
+
+.foto-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nome {
+  color: #1a1a1a;
+  font-weight: 800;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.txt-info {
+  color: #555;
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.txt-info strong {
+  color: #333;
+}
+
+.btn-group-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn-custom {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  background: #ac2c2c;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-custom:active {
+  transform: scale(0.98);
+  opacity: 0.9;
 }

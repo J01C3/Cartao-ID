@@ -1,61 +1,69 @@
-<ion-header>
-  <ion-toolbar color="vermelho-claro">
-    <ion-title>Sobre Mim</ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+  <div class="header-custom">
+    <span class="titulo-header">Ajuste de Cores</span>
+  </div>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="color-content">
+  <div class="main-bg" [style.background-color]="bgGradient">
 
-  <ion-card>
-    <ion-card-content class="ion-text-center">
+    <div class="wrapper">
+      <div class="card-ajuste-fixo">
+        <div class="card-padding">
 
-      <!-- Minha Foto -->
-      <ion-avatar style="margin: 0 auto 16px auto; width: 100px; height: 100px;">
-        <img src="/assets/minhaFoto.jpeg" alt="Foto">
-      </ion-avatar>
+          <div class="avatar-container">
+            <img src="assets/RGB.png" alt="RGB">
+          </div>
 
-      <!-- Meu Nome -->
-      <h2><strong>Joyce Do Vale Silva</strong></h2>
+          <h2 class="titulo-sessao">Ajuste de Cores</h2>
 
-      <ion-text color="medium">
-        <p>Estudante de Tecnologia</p>
-      </ion-text>
+          <div class="controls-container">
+            <div class="color-item red-theme">
+              <div class="info-row">
+                <span>Red</span>
+                <span class="val-badge">{{ red }}</span>
+              </div>
+              <input type="range" min="0" max="255" [(ngModel)]="red" (input)="onRangeChange()" class="slider range-red">
+            </div>
 
-    </ion-card-content>
-  </ion-card>
+            <div class="color-item green-theme">
+              <div class="info-row">
+                <span>Green</span>
+                <span class="val-badge">{{ green }}</span>
+              </div>
+              <input type="range" min="0" max="255" [(ngModel)]="green" (input)="onRangeChange()" class="slider range-green">
+            </div>
 
-  <!-- Minhas Informações -->
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Informações</ion-card-title>
-    </ion-card-header>
+            <div class="color-item blue-theme">
+              <div class="info-row">
+                <span>Blue</span>
+                <span class="val-badge">{{ blue }}</span>
+              </div>
+              <input type="range" min="0" max="255" [(ngModel)]="blue" (input)="onRangeChange()" class="slider range-blue">
+            </div>
+          </div>
 
-    <ion-card-content>
-      <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
-      <p><strong>Instituição:</strong> UNISUAM</p>
-      <p><strong>Email:</strong> joycedovale.s@gmail.com</p>
-    </ion-card-content>
-  </ion-card>
+          <div class="preview-box" [style.background-color]="previewColor">
+            {{ hexColor }}
+          </div>
 
-  <!-- Sobre Mim -->
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Sobre mim</ion-card-title>
-    </ion-card-header>
+          <div class="btn-group-vertical">
+            <button class="btn-custom" [style.background-color]="btnColor" (click)="mudarCorBotao()">
+              Aplicar no Botão
+            </button>
 
-    <ion-card-content>
-      <p>
-        Sou estudante apaixonada por tecnologia e desenvolvimento web,
-        sempre em busca de aprender coisas novas e evoluir minhas habilidades.
-        Tenho experiência com HTML, CSS e JavaScript, e atualmente estou me aprofundando no uso de frameworks
-        como Ionic e Angular, desenvolvendo projetos práticos para aprimorar meus conhecimentos.
-      </p>
-    </ion-card-content>
-  </ion-card>
+            <button class="btn-custom default-red" (click)="mudarFundo()">
+              Mudar Fundo
+            </button>
 
-  <!-- Botão voltar -->
-  <ion-button expand="block" routerLink="/" color="vermelho-claro">
-  Voltar
-  </ion-button>
+            <button class="btn-custom default-red" (click)="voltar()">
+              Voltar
+            </button>
+          </div>
 
+        </div>
+      </div>
+    </div>
+
+  </div>
 </ion-content>

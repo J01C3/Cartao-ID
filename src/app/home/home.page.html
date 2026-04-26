@@ -1,38 +1,35 @@
-<ion-header>
-  <ion-toolbar color="vermelho-claro">
-    <ion-title>Cartão ID</ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+  <div class="header-custom">
+    <span class="titulo-header">Home</span>
+  </div>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="home-content"  [fullscreen]="false">
 
-  <ion-card>
-    <ion-card-content class="ion-text-center">
+  <div class="main-bg">
+    <div class="wrapper">
 
-      <!-- Minha Foto -->
-      <ion-avatar style="margin: 0 auto 16px auto; width: 100px; height: 100px;">
-        <img src="/assets/minhaFoto.jpeg" alt="Foto de Joyce">
-      </ion-avatar>
+      <div class="cartao-id-fixo">
 
-      <!-- Meu Nome -->
-      <h2><strong>Joyce Do Vale Silva</strong></h2>
+        <div class="foto-perfil">
+          <img src="assets/minhaFoto.jpeg" alt="Foto">
+        </div>
 
-      <!-- Minha Matrícula -->
-      <ion-text color="medium">
-        <p>Matrícula: <strong>25106404</strong></p>
-      </ion-text>
+        <div class="dados">
+          <h2 class="nome">Joyce Do Vale Silva</h2>
+          <p class="txt-info">Matrícula: <strong>25106404</strong></p>
+          <p class="txt-info">Bonsucesso - Manhã</p>
+          <p class="txt-info">Palavra-Chave: (...)</p>
+        </div>
 
-      <!-- unidade/turno -->
-      <ion-text color="medium">
-        <p>Bonsucesso - Manhã</p>
-      </ion-text>
+        <div class="btn-group-vertical">
+          <button class="btn-custom default-red" routerLink="/sobre">
+            Tela 2 (Color Change)
+          </button>
+        </div>
 
-      <!-- Botão -->
-      <ion-button expand="block" routerLink="/sobre" color="vermelho-claro">
-        Ver mais sobre mim
-      </ion-button>
+      </div>
 
-    </ion-card-content>
-  </ion-card>
-
+    </div>
+  </div>
 </ion-content>

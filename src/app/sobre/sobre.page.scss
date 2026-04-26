@@ -1,0 +1,157 @@
+/* 1. Reset do Ionic: Altura total no Mobile */
+ion-content {
+  --background: transparent !important;
+  --offset-top: 0px !important;
+  --offset-bottom: 0px !important;
+  height: 100%;
+
+  &::part(background) {
+    background: none !important;
+  }
+
+  &::part(scroll) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+  }
+}
+
+/* 2. Cabeçalho (Título à esquerda) */
+.header-custom {
+  background: #ac2c2c !important;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha o conteúdo no início (esquerda) */
+  padding-left: 20px; /* Espaçamento da borda esquerda */
+  padding-top: env(safe-area-inset-top);
+
+  .titulo-header {
+    color: white !important;
+    font-weight: bold;
+    font-size: 19px;
+  }
+}
+
+/* 3. Container Principal */
+.main-bg {
+  flex: 1;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+}
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 4. Card e Título Interno (Alinhado à esquerda) */
+.card-ajuste-fixo {
+  width: 100%;
+  max-width: 350px;
+  background: #ffffff !important;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+  .card-padding {
+    padding: 30px 20px;
+  }
+}
+
+.titulo-sessao {
+  color: #1a1a1a !important;
+  font-weight: 800;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+}
+
+/* 5. Sliders e Avatar */
+.avatar-container {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px; /* Avatar continua centralizado no card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img { width: 100%; height: 100%; object-fit: contain; }
+}
+
+.color-item {
+  margin-bottom: 18px;
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    span { font-size: 14px; font-weight: bold; }
+    .val-badge { color: #666; font-family: monospace; }
+  }
+}
+
+.red-theme { .info-row span:first-child { color: #ff4d4d; } }
+.green-theme { .info-row span:first-child { color: #2dd36f; } }
+.blue-theme { .info-row span:first-child { color: #3880ff; } }
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  background: #f0f0f0;
+  outline: none;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    border: 3px solid currentColor;
+  }
+}
+
+.range-red { color: #ff4d4d; }
+.range-green { color: #2dd36f; }
+.range-blue { color: #3880ff; }
+
+/* 6. Preview e Botões (Padronizados) */
+.preview-box {
+  margin: 20px 0;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.btn-group-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-custom {
+  width: 100%;
+  height: 54px;
+  border: none;
+  border-radius: 12px;
+  color: white !important;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  &:active { transform: scale(0.97); opacity: 0.8; }
+  &.default-red { background: #ac2c2c !important; }
+}
